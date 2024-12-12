@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Signup Form</h1>
+    <form id="signup-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <h2>Form Data:</h2>
+    <p id="form-data-display">Your submitted data will appear here.</p>
+    <script src="script.js"></script>
+    <br>
+    <br>
+    <h1>Item Details</h1>
+    <div>
+        <p id="item-summary">This is a brief summary of the item details.</p>
+        <p id="item-full-details" class="hidden-content">Here is the full detail of the item, including all specifications, features, and additional information.</p>
+        <button id="read-more-btn" onclick="toggleDetails()">Read more</button>
+    </div>
+    <br>
+    <br>
+    <h1>Student Details</h1>
+
+    <form id="student-form">
+        <label for="student-name">Name:</label>
+        <input type="text" id="student-name" name="name" required><br><br>
+
+        <label for="student-age">Age:</label>
+        <input type="number" id="student-age" name="age" required><br><br>
+
+        <label for="student-grade">Grade:</label>
+        <input type="text" id="student-grade" name="grade" required><br><br>
+
+        <button type="button" onclick="addStudent()">Add Student</button>
+    </form>
+
+    <h2>Student List</h2>
+    <table border="1" id="student-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <form id="edit-form" class="hidden-form">
+        <h3>Edit Student</h3>
+        <label for="edit-name">Name:</label>
+        <input type="text" id="edit-name" required><br><br>
+
+        <label for="edit-age">Age:</label>
+        <input type="number" id="edit-age" required><br><br>
+
+        <label for="edit-grade">Grade:</label>
+        <input type="text" id="edit-grade" required><br><br>
+
+        <button type="button" onclick="saveEdit()">Save</button>
+        <button type="button" onclick="cancelEdit()">Cancel</button>
+    </form>
+    <br>
+    <br>
+</body>
+</html>
